@@ -7,13 +7,8 @@ Pastikan Anda telah menginstal:
 - Redis
 - Postman atau cURL untuk testing
 
-## 2. Clone Repository
-```sh
-git clone https://github.com/kusnadi8605/simple_mysql_redis.git
-cd simple_mysql_redis
-```
 
-## 3. Setup Database
+## 2. Setup Database
 Buat database MySQL dengan nama `simple_mysql_redis` dan jalankan query berikut:
 ```sql
 CREATE TABLE users (
@@ -22,6 +17,12 @@ CREATE TABLE users (
     email VARCHAR(100) NOT NULL,
     age INT NOT NULL
 );
+```
+
+## 3. Clone Repository
+```sh
+git clone https://github.com/kusnadi8605/simple_mysql_redis.git
+cd simple_mysql_redis
 ```
 
 ## 4. Konfigurasi Environment
