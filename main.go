@@ -95,7 +95,7 @@ func main() {
 
 	// Start the server
 	fmt.Println("Server is running on port 8080")
-	log.Fatal(e.Start(":8080"))
+	log.Fatal(e.Start(":8089"))
 }
 
 // Initialize MySQL connection

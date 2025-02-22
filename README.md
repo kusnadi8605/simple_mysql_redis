@@ -10,7 +10,7 @@ Pastikan Anda telah menginstal:
 ## 2. Clone Repository
 ```sh
 git clone https://github.com/kusnadi8605/simple_mysql_redis.git
-cd golang-mysql-redis-crud
+cd simple_mysql_redis
 ```
 
 ## 3. Setup Database
@@ -29,21 +29,23 @@ Sesuaikan konfigurasi DB dan Redis
 
 ## 5. Install Dependencies
 ```sh
+go mod init simple_mysql_redis
 go mod tidy
+go mod vendor
 ```
 
 ## 6. Jalankan Server
 ```sh
 go run main.go
 ```
-Server akan berjalan di `http://localhost:8080`
+Server akan berjalan di `http://localhost:8089`
 
 ## 7. API Endpoints dan cURL Commands
 
 ### 1. Create User
 **Endpoint:** `POST /users`
 ```sh
-curl -X POST http://localhost:8080/users \
+curl -X POST http://localhost:8089/users \
      -H "Content-Type: application/json" \
      -d '{
          "name": "Test",
@@ -68,7 +70,7 @@ curl -X POST http://localhost:8080/users \
 ### 2. Get All Users
 **Endpoint:** `GET /users`
 ```sh
-curl -X GET http://localhost:8080/users
+curl -X GET http://localhost:8089/users
 ```
 **Response:**
 ```json
@@ -89,7 +91,7 @@ curl -X GET http://localhost:8080/users
 ### 3. Get Single User
 **Endpoint:** `GET /users/{id}`
 ```sh
-curl -X GET http://localhost:8080/users/1
+curl -X GET http://localhost:8089/users/1
 ```
 **Response:**
 ```json
@@ -108,7 +110,7 @@ curl -X GET http://localhost:8080/users/1
 ### 4. Update User
 **Endpoint:** `PUT /users`
 ```sh
-curl -X PUT http://localhost:8080/users \
+curl -X PUT http://localhost:8089/users \
      -H "Content-Type: application/json" \
      -d '{
          "id": 1,
@@ -134,7 +136,7 @@ curl -X PUT http://localhost:8080/users \
 ### 5. Delete User
 **Endpoint:** `DELETE /users/{id}`
 ```sh
-curl -X DELETE http://localhost:8080/users/1
+curl -X DELETE http://localhost:8089/users/1
 ```
 **Response:**
 ```json
